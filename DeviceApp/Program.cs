@@ -25,7 +25,7 @@ namespace DeviceApp
 
             if (Int32.TryParse(payload, out telemetryInterval))
             {
-                Console.WriteLine($"Interval set to: {telemetryInterval} seconds.");
+                Console.WriteLine($"Direct Method message received. Interval set to: {telemetryInterval} seconds.");
 
                 // { "result": "Executed direct method: SetTelemetryInterval" }
                 string json = "{\"result\": \"Executed direct method: " + request.Name + "\"}";
